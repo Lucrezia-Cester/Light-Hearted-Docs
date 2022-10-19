@@ -6,4 +6,4 @@ checking the frequency content obtained from different body location.
 
 - April 2021 - Semptember 2021 : First validation trial. Ethcis approval were obtained from the University of Glasgow ethics department. In total, 13 
 volunteers were recruited, although for the paper only the data from 10 volunteers was kept. The desciption of the results can be found in this 
-[paper]([GitHub Pages](https://pages.github.com/).
+[paper](https://pages.github.com/).
