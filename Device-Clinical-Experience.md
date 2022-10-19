@@ -2,7 +2,7 @@
 
 
 ## Bench Testings
-March 2020 - March 2021 : the device was in the development phase. This [paper](https://opg.optica.org/abstract.cfm?uri=isa-2020-IW3D.4) shows the device being tested for the purpose of checking that such a technology could acquire heart sounds with the best SNR. The paper describes the laser and ultrafast camera ability to acquire speckle patterns and the image processing necessary to extract sound from light. The object emitting sound was aluminium foil next to a speaker. This was the first proof of concept that allowed to acquire the best parameters for engineering the device and writing the necessary computer vision sofware. The ![picture](proof-of-concept.png) 
+March 2020 - March 2021 : the device was in the development phase. This [paper](https://opg.optica.org/abstract.cfm?uri=isa-2020-IW3D.4) shows the device being tested for the purpose of checking that such a technology could acquire heart sounds with the best SNR. The paper describes the laser and ultrafast camera ability to acquire speckle patterns and the image processing necessary to extract sound from light. The object emitting sound was aluminium foil next to a speaker. This was the first proof of concept that allowed to acquire the best parameters for engineering the device and writing the necessary computer vision sofware. The image ![picture](proof-of-concept.png) 
 
 
 shows the set up of what would then become the essential parts of the device: laser and ultrafast camera pointed towards a vibrating surface (surface that vibrates due to sound ex: wrist, chest, neck etc.).
@@ -11,7 +11,7 @@ shows the set up of what would then become the essential parts of the device: la
 ## First Validation Trial on Humans
 The device was tested on 3 subjects (myself and two of my collegues) to correctly set up parameters such as the degree of freedom of 
 the angle for how much could the device be rotated in order to point int towards the desired position on the patient's body. Other tests included 
-checking the frequency content obtained from different body locations, what ulytafast camera was most suited to acquire the best signal, what post ptocessing algorithm was best suited to process the data, what laser power/frequency was best suited. This is the [paper](https://ieeexplore.ieee.org/abstract/document/9541553) that shows the final results of these tests and below is the image of the heart sound obtained with the device on a subject vs what the stethoscope could achieve on the same subject ![image](bench-mark-results.png)
+checking the frequency content obtained from different body locations, what ulytafast camera was most suited to acquire the best signal, what post ptocessing algorithm was best suited to process the data, what laser power/frequency was best suited. This is the [paper](https://ieeexplore.ieee.org/abstract/document/9541553) that shows the final results of these tests and below is the image of the heart sound obtained with the device on a subject vs what the stethoscope could achieve on the same subject ![image](bench-mark-results.png).
 
 
 ## Bench Testings
