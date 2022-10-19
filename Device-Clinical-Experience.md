@@ -8,7 +8,7 @@ March 2020 - March 2021 : the device was in the development phase. This [paper](
 ## First Validation Trial on Humans
 The device was tested on 3 subjects (myself and two of my collegues) to correctly set up parameters such as the degree of freedom of 
 the angle for how much could the device be rotated in order to point int towards the desired position on the patient's body. Other tests included 
-checking the frequency content obtained from different body locations, what ulytafast camera was most suited to acquire the best signal, what post ptocessing algorithm was best suited to process the data, what laser power/frequency was best suited. This is the [paper](https://ieeexplore.ieee.org/abstract/document/9541553) that shows the final results of these tests and below is the image of the heart sound obtained with the device on a subject vs what the stethoscope could achieve on the same subject ![alt text](Light-Hearted-Docs/Screenshot 2022-10-19 at 12.06.17.png)
+checking the frequency content obtained from different body locations, what ulytafast camera was most suited to acquire the best signal, what post ptocessing algorithm was best suited to process the data, what laser power/frequency was best suited. This is the [paper](https://ieeexplore.ieee.org/abstract/document/9541553) that shows the final results of these tests and below is the image of the heart sound obtained with the device on a subject vs what the stethoscope could achieve on the same subject ![image](bench-mark-results.png)
 
 
 ## Bench Testings
