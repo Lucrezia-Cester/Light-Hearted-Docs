@@ -2,7 +2,7 @@
 
 
 ## Bench Testings
-March 2020 - March 2021 : the device was in the development phase. This [paper](https://opg.optica.org/abstract.cfm?uri=isa-2020-IW3D.4) shows the device being tested for the purpose of checking that such a technology could acquire heart sounds with the best SNR. The paper describes the laser and ultrafast camera ability to acquire speckle patterns and the image processing necessary to extract sound from light. The object emitting sound was aluminium foil next to a speaker. This was the first proof of concept that allowed to acquire the best parameters for engineering the device and writing the necessary computer vision sofware. 
+March 2020 - March 2021 : the device was in the development phase. This [paper](https://opg.optica.org/abstract.cfm?uri=isa-2020-IW3D.4) shows the device being tested for the purpose of checking that such a technology could acquire heart sounds with the best SNR. The paper describes the laser and ultrafast camera ability to acquire speckle patterns and the image processing necessary to extract sound from light. The object emitting sound was aluminium foil next to a speaker. This was the first proof of concept that allowed to acquire the best parameters for engineering the device and writing the necessary computer vision sofware. The [picture](proof-pf-concept.png) shows the set up of what would then become the essential parts of the device: laser and ultrafast camera pointed towards a vibrating surface (surface that vibrates due to sound ex: wrist, chest, neck etc.).
 
 
 ## First Validation Trial on Humans
