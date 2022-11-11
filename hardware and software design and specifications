@@ -36,7 +36,8 @@ This document applies to Light-Hearted release v.1.0.
 | AI   | Artificial Intelligence                                                      | 
 | AS   | Aortic Stenosis                                                              | 
 | CVDs | Cardiovascular Diseases                                                      | 
-| HSs  | Heart Sounds.                                                                | 
+| HSs  | Heart Sounds                                                                 | 
+| UI   | User Interface                                                               | 
 
 
 The following stakeholders contributed to the requirements gathering process. 
@@ -73,16 +74,28 @@ By having this remote monitoring contact-less and automatic CVD diagnostic devic
 - The device will be placed in a booth in the GP waiting room and 
 
 #### Cardiologists' clinics (during the clinical trial)
-- The device will be used on AS patients in the cardiologists' clinic.
+- The device will be used on AS patients in the cardiologists' clinic. The device will be composed of a small box, which will be connected to a personal computer. The device will be placed in the 
+cardiologist's clinic. The tripod on which it stands can be regulated to adjust to the height of the patient. The device will be connected to a computer. The cardiologist will have simple UI on the computer where they will need to press a button to start the acquisition. The UI will advert the cardiologist when 
+the acquisition has ended.
+The device will be kept in the cardiologist' clinic.
 
 ### Use Cases 
 
-#### Use Case During the Clinical Trial
+#### Use Case During the Clinical Trial (normal device functioning)
 Data will be acquired from patients with AS as they undergo their normal visit at the Cardiologist. The patient will be sitting down and breathe normally while the device will be pointed at their neck for a few seconds. 
 The patient won't feel any burn on their skin during or after the dtaa taking process. 
-The data will then be analysed by a complimentary software and the heart sounds of the patient will be displayed. 
+The cardiologist will start the device by switching a button on the device's back The cardiologist will have the device's software on a nerby computer. The cardiologist will press the start button on the 
+device's complimentary software. The device will start acquisition and then the UI of the software will announce to the cardiologist when the acquisition is finished. This will take seconds. The cardiologist will then switch off the device 
+with the switch at the back. 
+The data will then be analysed by the complimentary software and the heart sounds of the patient will be displayed on the UI. 
 The data will then be used to train a ML model.
 
+#### Use Case During the Clinical Trial (faulty device functioning)
+A faulty use of the device might occur because of the following reasons:
+- The cardiologist points the device in the eye of the patient for a prolonged period of time instead than pointing it at the patient's neck as outlined in the device instructions.
+- The cardiologist forgets to switch on the device thus no data is acquired. 
+- The cardiologist forgets to switch on the software and press the start button thus no data is acquired.
+- The cardiologist forgets to switch off the device in between acquisition thus the device overheats and there is a laser on.
 
 ### Considerations
 
