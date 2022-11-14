@@ -1,0 +1,764 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Software and Hardware Design Specification - Light-Hearted &#8212; Light-Hearted Technical File</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Clinical experience obtained with the device so far" href="Device-Clinical-Experience.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/light-hearted-logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Light-Hearted Technical File</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    <no title>
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Device%20Labels.html">
+   Device Labels
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Device-Clinical-Experience.html">
+   Clinical experience obtained with the device so far
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Software and Hardware Design Specification - Light-Hearted
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/hardware and software design and specifications.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Software and Hardware Design Specification - Light-Hearted
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#purpose-and-scope">
+   Purpose and Scope.
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scope">
+     Scope
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#roles-and-responsibilities">
+   Roles and Responsibilities
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition">
+   Definition
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction">
+     Introduction
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#users">
+     Users
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#when-the-device-will-be-finished-and-tested-gp-practices">
+       (when the device will be finished and tested) GP practices
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cardiologists-during-the-clinical-trial">
+       Cardiologists (during the clinical trial)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-environments">
+     Use Environments
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#when-the-device-will-be-finished-and-tested-gp-waiting-room">
+       (when the device will be finished and tested) GP waiting room
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cardiologists-clinics-during-the-clinical-trial">
+       Cardiologists’ clinics (during the clinical trial)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-cases">
+     Use Cases
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#use-case-during-the-clinical-trial-normal-device-functioning">
+       Use Case During the Clinical Trial (normal device functioning)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#use-case-during-the-clinical-trial-faulty-device-functioning">
+       Use Case During the Clinical Trial (faulty device functioning)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#considerations">
+     Considerations
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#user-requirements">
+     User requirements
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Software and Hardware Design Specification - Light-Hearted</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Software and Hardware Design Specification - Light-Hearted
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#purpose-and-scope">
+   Purpose and Scope.
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scope">
+     Scope
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#roles-and-responsibilities">
+   Roles and Responsibilities
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition">
+   Definition
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduction">
+     Introduction
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#users">
+     Users
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#when-the-device-will-be-finished-and-tested-gp-practices">
+       (when the device will be finished and tested) GP practices
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cardiologists-during-the-clinical-trial">
+       Cardiologists (during the clinical trial)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-environments">
+     Use Environments
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#when-the-device-will-be-finished-and-tested-gp-waiting-room">
+       (when the device will be finished and tested) GP waiting room
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#cardiologists-clinics-during-the-clinical-trial">
+       Cardiologists’ clinics (during the clinical trial)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-cases">
+     Use Cases
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#use-case-during-the-clinical-trial-normal-device-functioning">
+       Use Case During the Clinical Trial (normal device functioning)
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#use-case-during-the-clinical-trial-faulty-device-functioning">
+       Use Case During the Clinical Trial (faulty device functioning)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#considerations">
+     Considerations
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#user-requirements">
+     User requirements
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="software-and-hardware-design-specification-light-hearted">
+<h1>Software and Hardware Design Specification - Light-Hearted<a class="headerlink" href="#software-and-hardware-design-specification-light-hearted" title="Permalink to this headline">#</a></h1>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Author</p></td>
+<td><p>Lucrezia Cester</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="purpose-and-scope">
+<h1>Purpose and Scope.<a class="headerlink" href="#purpose-and-scope" title="Permalink to this headline">#</a></h1>
+<p>This document contains the design specification for the hardware and software of the Light-Hearted device. It will describe what the light-hearted device is supposed to do.</p>
+<section id="scope">
+<h2>Scope<a class="headerlink" href="#scope" title="Permalink to this headline">#</a></h2>
+<p>This document applies to Light-Hearted release v.1.0.</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="roles-and-responsibilities">
+<h1>Roles and Responsibilities<a class="headerlink" href="#roles-and-responsibilities" title="Permalink to this headline">#</a></h1>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Role</p></th>
+<th class="head"><p>Responsibility</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Development lead</p></td>
+<td><p>To create the design specifications to match</p></td>
+</tr>
+<tr class="row-odd"><td><p>Clinical lead</p></td>
+<td><p>To provide clinical advice on the specificaitons of the device</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="definition">
+<h1>Definition<a class="headerlink" href="#definition" title="Permalink to this headline">#</a></h1>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Definition</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ML</p></td>
+<td><p>Machine Learning</p></td>
+</tr>
+<tr class="row-odd"><td><p>AI</p></td>
+<td><p>Artificial Intelligence</p></td>
+</tr>
+<tr class="row-even"><td><p>AS</p></td>
+<td><p>Aortic Stenosis</p></td>
+</tr>
+<tr class="row-odd"><td><p>CVDs</p></td>
+<td><p>Cardiovascular Diseases</p></td>
+</tr>
+<tr class="row-even"><td><p>HSs</p></td>
+<td><p>Heart Sounds</p></td>
+</tr>
+<tr class="row-odd"><td><p>UI</p></td>
+<td><p>User Interface</p></td>
+</tr>
+</tbody>
+</table>
+<p>The following stakeholders contributed to the requirements gathering process.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Role</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Lucrezia cester</p></td>
+<td><p>Development Lead</p></td>
+</tr>
+<tr class="row-odd"><td><p>Thomas Keeble.</p></td>
+<td><p>Clinical Lead</p></td>
+</tr>
+</tbody>
+</table>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
+<p>Cardiovascular diseases are the leading cause of death worldwide. The NHS long-term plan states that CVDs are a preventable if detected eearly and outlines the need to save 100,000 deaths by these diseases by 2025.
+Aortic Stenosis is one example of CVDs. This disease is usually diagnosed through heart ultrasound, but the waiting list for this exam is very long, it requires a clinical expert and 50% of the patients that undertake this exam end up having a normal exam.
+Therefore we propose a method to gatekeep heart ultrasound exams and pick up asymptomatic AS patients so that we can screen out normal patients from having heart ultrasound and also pick up asymptomatic patients to start treaatment early and focus on prevention.</p>
+<p>In order to fullfil the vision for this device, it first needs to undergo a clinical trial. It was already bench-mark tested.</p>
+<p>The device as it stands can acquire cardiovascular sounds and provide the same kind of data (albeit more precise, given its ability to get the high frequency ranges of the HSs) that a stethoscope can. However the purpose of the trial will be the acquire data from patients with AS. The dataset
+will allow to train an AI algorithm (that was already bench-tested). Thus the end product will be an AI-powered non-contacless remote heart monitoring device that can be used automatically in the GP practice to be focus where healthcare should head towards: prevention.</p>
+</section>
+<section id="users">
+<h2>Users<a class="headerlink" href="#users" title="Permalink to this headline">#</a></h2>
+<section id="when-the-device-will-be-finished-and-tested-gp-practices">
+<h3>(when the device will be finished and tested) GP practices<a class="headerlink" href="#when-the-device-will-be-finished-and-tested-gp-practices" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>The primary users will patients in GPs practices. A disproportionate amount of money is used to cure patients that are already sick and not enough money is spent on prevention and GP practices, which see the vast majority of the population.
+By having this remote monitoring contact-less and automatic CVD diagnostic device in the GP practice, patients will be able to check in just a few seconds whether they have AS or not and check its progressions everytime they see their GP, sparing them an expert visit to the cardiologist.</p></li>
+</ul>
+</section>
+<section id="cardiologists-during-the-clinical-trial">
+<h3>Cardiologists (during the clinical trial)<a class="headerlink" href="#cardiologists-during-the-clinical-trial" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>The trial will take place in the cardiology clinic and tested on patients with AS.</p></li>
+</ul>
+</section>
+</section>
+<section id="use-environments">
+<h2>Use Environments<a class="headerlink" href="#use-environments" title="Permalink to this headline">#</a></h2>
+<section id="when-the-device-will-be-finished-and-tested-gp-waiting-room">
+<h3>(when the device will be finished and tested) GP waiting room<a class="headerlink" href="#when-the-device-will-be-finished-and-tested-gp-waiting-room" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>The device will be placed in a booth in the GP waiting room and</p></li>
+</ul>
+</section>
+<section id="cardiologists-clinics-during-the-clinical-trial">
+<h3>Cardiologists’ clinics (during the clinical trial)<a class="headerlink" href="#cardiologists-clinics-during-the-clinical-trial" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>The device will be used on AS patients in the cardiologists’ clinic. The device will be composed of a small box, which will be connected to a personal computer. The device will be placed in the
+cardiologist’s clinic. The tripod on which it stands can be regulated to adjust to the height of the patient. The device will be connected to a computer. The cardiologist will have simple UI on the computer where they will need to press a button to start the acquisition. The UI will advert the cardiologist when
+the acquisition has ended.
+The device will be kept in the cardiologist’ clinic.</p></li>
+</ul>
+</section>
+</section>
+<section id="use-cases">
+<h2>Use Cases<a class="headerlink" href="#use-cases" title="Permalink to this headline">#</a></h2>
+<section id="use-case-during-the-clinical-trial-normal-device-functioning">
+<h3>Use Case During the Clinical Trial (normal device functioning)<a class="headerlink" href="#use-case-during-the-clinical-trial-normal-device-functioning" title="Permalink to this headline">#</a></h3>
+<p>Data will be acquired from patients with AS as they undergo their normal visit at the Cardiologist. The patient will be sitting down and breathe normally while the device will be pointed at their neck for a few seconds.
+The patient won’t feel any burn on their skin during or after the dtaa taking process.
+The cardiologist will start the device by switching a button on the device’s back The cardiologist will have the device’s software on a nerby computer. The cardiologist will press the start button on the
+device’s complimentary software. The device will start acquisition and then the UI of the software will announce to the cardiologist when the acquisition is finished. This will take seconds. The cardiologist will then switch off the device
+with the switch at the back.
+The data will then be analysed by the complimentary software and the heart sounds of the patient will be displayed on the UI.
+The data will then be used to train a ML model.</p>
+</section>
+<section id="use-case-during-the-clinical-trial-faulty-device-functioning">
+<h3>Use Case During the Clinical Trial (faulty device functioning)<a class="headerlink" href="#use-case-during-the-clinical-trial-faulty-device-functioning" title="Permalink to this headline">#</a></h3>
+<p>A faulty use of the device might occur because of the following reasons:</p>
+<ul class="simple">
+<li><p>The cardiologist points the device in the eye of the patient for a prolonged period of time instead than pointing it at the patient’s neck as outlined in the device instructions.</p></li>
+<li><p>The cardiologist forgets to switch on the device thus no data is acquired.</p></li>
+<li><p>The cardiologist forgets to switch on the software and press the start button thus no data is acquired.</p></li>
+<li><p>The cardiologist forgets to switch off the device in between acquisition thus the device overheats and there is a laser on.</p></li>
+</ul>
+</section>
+</section>
+<section id="considerations">
+<h2>Considerations<a class="headerlink" href="#considerations" title="Permalink to this headline">#</a></h2>
+<p>The following list of considerations Has been compiled from relevant suggestions from ISO 13485, BSI 62304 and BSI 62366:</p>
+<ul class="simple">
+<li><p>input data format to be processed.</p></li>
+<li><p>output format of the application</p></li>
+<li><p>destination of the output data</p></li>
+<li><p>the expected application/service uptime</p></li>
+<li><p>the workload e.g. number of CTs per week.</p></li>
+<li><p>maximum acceptable turnaround time</p></li>
+<li><p>number and frequency of users to be supported</p></li>
+<li><p>user access</p></li>
+<li><p>platform for delivery</p></li>
+<li><p>past complaints, failure reports, adverse events of similar products</p></li>
+<li><p>usability and maintenance</p></li>
+<li><p>security controls</p></li>
+<li><p>workflow integration</p></li>
+<li><p>local population demographics, to be reflected in training data.</p></li>
+<li><p>minimum sensitivity, specificity, true/false positive/negative rates.</p></li>
+<li><p>turnaround time for inference</p></li>
+<li><p>expected frequency of retraining.</p></li>
+<li><p>training data bias to acknowledge</p></li>
+<li><p>quality objectives for the project - e.g. quality metrics, ranges and thresholds</p></li>
+<li><p>contents of surveillance plan including metric to monitor once the application is deployed</p></li>
+<li><p>applicable regulatory requirements</p></li>
+<li><p>training requirements, such as workshops, training, documents etc.</p></li>
+<li><p>safety considerations for patients and staff</p></li>
+<li><p>information derived from similar/previous designs</p></li>
+<li><p>functional and capability requirements</p></li>
+<li><p>interfaces between systems</p></li>
+<li><p>software driven alarms, warnings and operator messages</p></li>
+<li><p>security requirements</p></li>
+<li><p>data definitions and database requirements</p></li>
+<li><p>installation and acceptance requirements of the delivered software at operation and maintenance site (* although this
+is GSTT only for projects built under this QMS)</p></li>
+<li><p>requirements related to methods of operation and maintenance</p></li>
+<li><p>requirements of IT network, Trust IT integration</p></li>
+<li><p>user maintenance requirements</p></li>
+<li><p>software update requirements</p></li>
+</ul>
+</section>
+<section id="user-requirements">
+<h2>User requirements<a class="headerlink" href="#user-requirements" title="Permalink to this headline">#</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Reference</p></th>
+<th class="head"><p>Requirement title</p></th>
+<th class="head"><p>Requirements Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SRS-001</p></td>
+<td><p>Shall be safe for use on patients</p></td>
+<td><p>The device should be built in a manner that ensures safety of the patients during and after treatment.</p></td>
+</tr>
+<tr class="row-odd"><td><p>SRS-002</p></td>
+<td><p>Shall be easy to use</p></td>
+<td><p>The device should be built in a manner such that the cardiologist will just need to press a button and the device will do the rest, focusing on ease of usability for the patient and comfort for the user.</p></td>
+</tr>
+<tr class="row-even"><td><p>SRS-003</p></td>
+<td><p>Shall acquire CVDs sounds from patients</p></td>
+<td><p>The device should be able to acquire CVDs sounds.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Device-Clinical-Experience.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Clinical experience obtained with the device so far</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Lucrezia Cester<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
