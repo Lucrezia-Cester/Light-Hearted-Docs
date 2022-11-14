@@ -1,0 +1,6 @@
+# In _config.yml
+title: Light-Hearted Technical File
+author: Lucrezia Cester
+logo: light-hearted-logo.png
+execute:
+  execute_notebooks: force
