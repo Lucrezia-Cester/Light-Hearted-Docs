@@ -1,0 +1,412 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Clinical experience obtained with the device so far &#8212; Light-Hearted Technical File</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Software and Hardware Design Specification - Light-Hearted" href="hardware%20and%20software%20design%20and%20specifications.html" />
+    <link rel="prev" title="Device Labels" href="Device%20Labels.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/light-hearted-logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Light-Hearted Technical File</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    <no title>
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Device%20Labels.html">
+   Device Labels
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Clinical experience obtained with the device so far
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hardware%20and%20software%20design%20and%20specifications.html">
+   Software and Hardware Design Specification - Light-Hearted
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/Device-Clinical-Experience.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bench-testings">
+   Bench Testings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-validation-trial-on-humans">
+   First Validation Trial on Humans
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#second-validation-trial-on-humans">
+   Second Validation Trial on Humans
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Clinical experience obtained with the device so far</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bench-testings">
+   Bench Testings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#first-validation-trial-on-humans">
+   First Validation Trial on Humans
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#second-validation-trial-on-humans">
+   Second Validation Trial on Humans
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="clinical-experience-obtained-with-the-device-so-far">
+<h1>Clinical experience obtained with the device so far<a class="headerlink" href="#clinical-experience-obtained-with-the-device-so-far" title="Permalink to this headline">#</a></h1>
+<section id="bench-testings">
+<h2>Bench Testings<a class="headerlink" href="#bench-testings" title="Permalink to this headline">#</a></h2>
+<p>March 2020 - March 2021 : the device was in the development phase. This <a class="reference external" href="https://opg.optica.org/abstract.cfm?uri=isa-2020-IW3D.4">paper</a> shows the device being tested for the purpose of checking that such a technology could acquire heart sounds with the best SNR. The paper describes the laser and ultrafast camera ability to acquire speckle patterns and the image processing necessary to extract sound from light. The object emitting sound was aluminium foil next to a speaker. This was the first proof of concept that allowed to acquire the best parameters for engineering the device and writing the necessary computer vision sofware. The image <img alt="picture" src="_images/proof-of-concept.png" /></p>
+<p>shows the set up of what would then become the essential parts of the device: laser and ultrafast camera pointed towards a vibrating surface (surface that vibrates due to sound ex: wrist, chest, neck etc.).</p>
+</section>
+<section id="first-validation-trial-on-humans">
+<h2>First Validation Trial on Humans<a class="headerlink" href="#first-validation-trial-on-humans" title="Permalink to this headline">#</a></h2>
+<p>The device was tested on 3 subjects (myself and two of my collegues) to correctly set up parameters such as the degree of freedom of
+the angle for how much could the device be rotated in order to point int towards the desired position on the patient’s body. Other tests included
+checking the frequency content obtained from different body locations, what ulytafast camera was most suited to acquire the best signal, what post ptocessing algorithm was best suited to process the data, what laser power/frequency was best suited. This is the <a class="reference external" href="https://ieeexplore.ieee.org/abstract/document/9541553">paper</a> that shows the final results of these tests and below is the image of the heart sound obtained with the device on a subject vs what the stethoscope could achieve on the same subject <img alt="image" src="_images/bench-mark-results.png" />.</p>
+</section>
+<section id="second-validation-trial-on-humans">
+<h2>Second Validation Trial on Humans<a class="headerlink" href="#second-validation-trial-on-humans" title="Permalink to this headline">#</a></h2>
+<p>April 2021 - Semptember 2021 : First proper validation trial. Ethcis approval were obtained from the University of Glasgow ethics department. In total, 13
+volunteers were recruited, although for the paper only the data from 10 volunteers was kept because the last 3 volunteers could only be tested long after the first set of 10 given they couldn’t come to get tested at the same time as the other volunteers. The desciption of the results can be found in this
+<a class="reference external" href="https://pages.github.com/">paper</a>. The volunteers were chosen from the department of Engineering from the UoG. At the beginning of the trial, 1 volunteer was diagnosed with a heart condition while 14 of the volunteers considered themselves as healthy, as they never reeived a diagnosis or had heart related problems that warranted a visit to the hospital. The volunteers were between 20 and 40 years of age, both males and females.
+The volunteers were asked to sit in a chair and brathe normally while the laser was pointed at the base of their neck (chosen location for acquisition after the previous development phase tests). Despite the laser power only being 0.04 mW, so eye safe, the volunteers were given the option to wear eye
+protective goggles acquired from the leading indutry vendor ThorLabs. The goggles were certified to be in good condition from engineerign experts. The goggles were made to block the laser frequency that was used by the device. Around 5 minutes of data was acquired from the volunteers on two different occasion, so the volunteers had to come during two different occasions. There was no required timelaspe between the two events. They could come in whenever they gave availability during a week. The laser power was very low so it was not only eye safe, but it also did not burn the skin. The volunteers were asked if they had experienced any unconfortableness during or afetr the trial but none of them reported any problems. The volunteers had to sign a document where they agreed to take part on the trial and agree that their data would be used in a research paper but that it would be anonymized. After the data processing step of the data collected, it was found that 1 vilunteer had a severe heart condition that they werent aware of. The volunteer went ahead to see a cardiologist that confirmed the diagnosis picked up by the device. The volunteer displayed no other symptoms. The diagnosis of all the other volunteers was consistent with theor previous status. A full description of the trial can be found in Chapter 7 of this <a class="reference external" href="https://theses.gla.ac.uk/83048/">thesis</a>.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="Device%20Labels.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Device Labels</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="hardware%20and%20software%20design%20and%20specifications.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Software and Hardware Design Specification - Light-Hearted</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Lucrezia Cester<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

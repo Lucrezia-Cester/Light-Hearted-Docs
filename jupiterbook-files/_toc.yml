@@ -1,0 +1,8 @@
+format: jb-book
+root: intro
+chapters:
+- file: Instruction-for-use.md
+- file: Device Labels.md
+- file: Device-Clinical-Experience.md
+- file: hardware and software design and specifications.md
+- file: Instruction-for-use.md
