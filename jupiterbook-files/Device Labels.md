@@ -1,6 +1,6 @@
 # Device Labels
 
-## Manufacturer's name and Organization's address
+## M1anufacturer's name and Organization's address
 -Lucrezia Cester
 -Lucrezia.Cester@gstt.nhs.uk
 -Westminster Bridge Road London, SE1 7EH, England, Guy's and St Thomas Hospital Trust.
