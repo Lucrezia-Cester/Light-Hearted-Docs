@@ -1,9 +1,9 @@
 # Device Labels
 
 ## M1anufacturer's name and Organization's address
-*Lucrezia Cester
-*Lucrezia.Cester@gstt.nhs.uk
-*Westminster Bridge Road London, SE1 7EH, England, Guy's and St Thomas Hospital Trust.
+* Lucrezia Cester
+* Lucrezia.Cester@gstt.nhs.uk
+* Westminster Bridge Road London, SE1 7EH, England, Guy's and St Thomas Hospital Trust.
 
 ## Device Indentification Details
 The device consists of:
