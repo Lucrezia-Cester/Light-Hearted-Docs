@@ -1,5 +1,5 @@
 format: jb-book
-root: intro.md
+root: intro
 chapters:
 - file: Instruction-for-use.md
 - file: Device Labels.md
