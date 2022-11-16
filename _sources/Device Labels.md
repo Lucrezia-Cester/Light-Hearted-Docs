@@ -30,12 +30,12 @@ so that the device sits at an angle of 90 degrees to the position of the patient
 * Ask the patient to sit in front of the device and stand still while breathing normally.
 * Start the device by switching the button on the back.
 * Follow instructions provided on the software webpage for how to acquire data. The software interface will tell you:
-   1. whether the device is on or off
-   2. how to start an acquisition
-   3. whether the acquisition is still in progress
-   4. whether the acquisition has ended
-   5. whether the data has been acquired successfully
-   6. the UI will display the data
+   1. Whether the device is on or off
+   2. How to start an acquisition
+   3. Whether the acquisition is still in progress
+   4. Whether the acquisition has ended
+   5. Whether the data has been acquired successfully. 
+   7. The UI will display the data
 * After the data has been acquired, switch off the device,
 
 ## Warnings
