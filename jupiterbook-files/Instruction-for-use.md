@@ -1,5 +1,13 @@
 # Instructions for Use
 
+# Acronyms
+
+| Item | Definition                                                                   |
+|------|------------------------------------------------------------------------------|
+| QA   | Quality Assurance                                                            |
+
+
+
 ## Device Purpose
 The device needs to acquire heart valve sounds and has been designed, manufactured and packaged to do so. Tests have been carried out in bech mark clinical trials to make sure the device is fit for purpose. The device purpose falls under the directive of Article 2.a. of the COUNCIL DIRECTIVE 93/42/EEC
 of 14 June 1993 concerning medical devices because its inteded use is for diagnosis of diseases in humans.
