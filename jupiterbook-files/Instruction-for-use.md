@@ -24,5 +24,10 @@ of the device whihc will be routinely touched.
 ## Demage to the device
 If the device is not handled with care as specified in the document "device labels" under the section "Handling conditions", the device might get damaged. 
 There are various scenarious which might occur:
-1. The circuit that connects the laser to the power supply tears away. In this case, while following the instructions in the document "device labels" under the section "Operating Instructions" step 6.1, the software will show that the device is not turned on. 
-2. The objective in front of the device is moved with respect to the camera thus it cannot focus light into the camera chip. If this happens while following the instructions in the document "device labels" under the section "Operating Instructions" step 6.5, the software will show that the data has not been acquired successfully and will show that the reflected light acquired by the camera does not match the required specifications as outlined in section 6.5.1.
+1. The circuit that connects the laser to the power supply tears away. In this case, while following the instructions in the document "device labels" under the section "Operating Instructions" step 6.1, the software will show that the device is not turned on. In this case the manufacturer must be called to fix the device, until then the device cannot be used.
+2. The objective in front of the device is moved with respect to the camera thus it cannot focus light into the camera chip. If this happens while following the instructions in the document "device labels" under the section "Operating Instructions" step 6.5, the software will show that the data has not been acquired successfully and will show that the reflected light acquired by the camera does not match the required specifications as outlined in section 6.5. In this case the manufacturer must be called to fix the device, until then the device cannot be used.
+3. Clinicians should calibrate the device and perdorm QA on the device once a day to ensure the device is working according to specifications. The instructions to permorm QA are laid out in this document in the section "Demage to the device".
+
+
+
+## Quality Assurance
