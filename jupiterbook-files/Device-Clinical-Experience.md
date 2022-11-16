@@ -1,5 +1,5 @@
-# Clinical experience obtained with the device so far
-
+# Clinical  Experience 
+Clinical  experience obtained with the device so far
 
 ## Bench Testings
 March 2020 - March 2021 : the device was in the development phase. This [paper](https://opg.optica.org/abstract.cfm?uri=isa-2020-IW3D.4) shows the device being tested for the purpose of checking that such a technology could acquire heart sounds with the best SNR. The paper describes the laser and ultrafast camera ability to acquire speckle patterns from laser light reflecting off vibrating surfaces due to sound and the image processing necessary to extract sound from light. The object vabrating due to sound was an aluminium foil which was placed next to a speaker. This was the first proof of concept that allowed to acquire the best parameters for engineering the device and writing the necessary computer vision sofware. The image ![picture](proof-of-concept.png) 
