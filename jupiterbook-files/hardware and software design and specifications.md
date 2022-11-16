@@ -50,11 +50,11 @@ The following stakeholders contributed to the requirements gathering process.
 
 ### Introduction
 
-Cardiovascular diseases are the leading cause of death worldwide. The NHS long-term plan states that CVDs are a preventable if detected eearly and outlines the need to save 100,000 deaths by these diseases by 2025.
+Cardiovascular diseases are the leading cause of death worldwide. The NHS long-term plan states that CVDs are a preventable if detected early and outlines the need to save 100,000 deaths by these diseases by 2025.
 Aortic Stenosis is one example of CVDs. This disease is usually diagnosed through heart ultrasound, but the waiting list for this exam is very long, it requires a clinical expert and 50% of the patients that undertake this exam end up having a normal exam. 
-Therefore we propose a method to gatekeep heart ultrasound exams and pick up asymptomatic AS patients so that we can screen out normal patients from having heart ultrasound and also pick up asymptomatic patients to start treaatment early and focus on prevention.
+Therefore we propose a method to gatekeep heart ultrasound exams and pick up asymptomatic AS patients so that we can screen out normal patients from having heart ultrasound and also pick up asymptomatic patients to start treatment early and focus on prevention.
 
-In order to fullfil the vision for this device, it first needs to undergo a clinical trial. It was already bench-mark tested.
+In order to fullfil the vision for this device, it first needs to undergo a clinical trial. It was already bench-mark tested. The purpose of these documents, that make the technical file, is to be able to ask for ethics approval for a clinical trial.
 
 The device as it stands can acquire cardiovascular sounds and provide the same kind of data (albeit more precise, given its ability to get the high frequency ranges of the HSs) that a stethoscope can. However the purpose of the trial will be the acquire data from patients with AS. The dataset 
 will allow to train an AI algorithm (that was already bench-tested). Thus the end product will be an AI-powered non-contacless remote heart monitoring device that can be used automatically in the GP practice to be focus where healthcare should head towards: prevention.
@@ -62,22 +62,23 @@ will allow to train an AI algorithm (that was already bench-tested). Thus the en
 ### Users
 
 #### (when the device will be finished and tested) GP practices 
-- The primary users will patients in GPs practices. A disproportionate amount of money is used to cure patients that are already sick and not enough money is spent on prevention and GP practices, which see the vast majority of the population. 
+The primary users will patients in GPs practices. A disproportionate amount of money is used to cure patients that are already sick and not enough money is spent on prevention and GP practices, which see the vast majority of the population. 
 By having this remote monitoring contact-less and automatic CVD diagnostic device in the GP practice, patients will be able to check in just a few seconds whether they have AS or not and check its progressions everytime they see their GP, sparing them an expert visit to the cardiologist.
 
+
 #### Cardiologists (during the clinical trial)
-- The trial will take place in the cardiology clinic and tested on patients with AS.
+The trial will take place in the cardiology clinic and tested on patients with AS.
 
 ### Use Environments
 
 #### (when the device will be finished and tested) GP waiting room 
-- The device will be placed in a booth in the GP waiting room and 
+The device will be placed in a booth in the GP waiting room and 
 
 #### Cardiologists' clinics (during the clinical trial)
-- The device will be used on AS patients in the cardiologists' clinic. The device will be composed of a small box, which will be connected to a personal computer. The device will be placed in the 
+The device will be used on AS patients in the cardiologists' clinics. The device will be composed of a small box, which will be connected to a personal computer. The device will be placed in the 
 cardiologist's clinic. The tripod on which it stands can be regulated to adjust to the height of the patient. The device will be connected to a computer. The cardiologist will have simple UI on the computer where they will need to press a button to start the acquisition. The UI will advert the cardiologist when 
 the acquisition has ended.
-The device will be kept in the cardiologist' clinic.
+The device will be kept in the cardiologist' clinic during usage.
 
 ### Use Cases 
 
@@ -92,10 +93,10 @@ The data will then be used to train a ML model.
 
 #### Use Case During the Clinical Trial (faulty device functioning)
 A faulty use of the device might occur because of the following reasons:
-- The cardiologist points the device in the eye of the patient for a prolonged period of time instead than pointing it at the patient's neck as outlined in the device instructions.
-- The cardiologist forgets to switch on the device thus no data is acquired. 
-- The cardiologist forgets to switch on the software and press the start button thus no data is acquired.
-- The cardiologist forgets to switch off the device in between acquisition thus the device overheats and there is a laser on.
+1. The cardiologist points the device in the eye of the patient for a prolonged period of time instead than pointing it at the patient's neck as outlined in the device instructions.
+2. The cardiologist forgets to switch on the device thus no data is acquired. 
+3. The cardiologist forgets to switch on the software and press the start button thus no data is acquired.
+4. The cardiologist forgets to switch off the device in between acquisition thus the device overheats and there is a laser on.
 
 ### Considerations
 
@@ -144,3 +145,4 @@ is GSTT only for projects built under this QMS)
 | SRS-001   | Shall be safe for use on patients                                                                           | The device should be built in a manner that ensures safety of the patients during and after treatment.                                                                                                                                                                                                                                                                                           | 
 | SRS-002   | Shall be easy to use                                                                                        | The device should be built in a manner such that the cardiologist will just need to press a button and the device will do the rest, focusing on ease of usability for the patient and comfort for the user.                                                                                                                                                                                                                                                                                                                                                       |
 | SRS-003   | Shall acquire CVDs sounds from patients                                                                     | The device should be able to acquire CVDs sounds.                                                                                                                                                                                                                                                                 |
+
