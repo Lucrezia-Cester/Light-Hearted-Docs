@@ -1,4 +1,4 @@
-# Intro
+# Light-Hearted Techical File
 
 
 This webpage contains the documents constituting the technical file which will be needed to ask for ethics approval.
