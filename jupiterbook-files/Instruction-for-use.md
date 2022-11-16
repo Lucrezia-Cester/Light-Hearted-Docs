@@ -24,4 +24,5 @@ of the device whihc will be routinely touched.
 ## Demage to the device
 If the device is not handled with care as specified in the document "device labels" under the section "Handling conditions", the device might get damaged. 
 There are various scenarious which might occur:
-1. The circuit that connects the laser to the power supply tears away. In this case, while following the instructions in the document "device labels" under the section "Operating Instructions" step 
+1. The circuit that connects the laser to the power supply tears away. In this case, while following the instructions in the document "device labels" under the section "Operating Instructions" step 6.1, the software will show that the device is not turned on. 
+2. The objective in front of the device is moved with respect to the camera thus it cannot focus light into the camera chip. If this happens while following the instructions in the document "device labels" under the section "Operating Instructions" step 6.1, the software will show that the device is not turned on. 
