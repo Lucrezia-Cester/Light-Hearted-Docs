@@ -12,6 +12,9 @@ The device consists of:
 * software
 * tripod
 
+A picture of the device as outlined in section "Device Indentification Details" point 1 can be seen below.
+![alt text](light-hearted-device.png)
+
 ## Clinical Investigation Requirements
 At this stage the device will be used exclusively for clinical investigation.
 
