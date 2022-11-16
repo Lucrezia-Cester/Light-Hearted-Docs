@@ -12,7 +12,7 @@ The device consists of:
 * software
 * tripod
 
-A picture of the device as outlined in section "Device Indentification Details" point 1 can be seen below.
+A picture of the camera and laser that make up the device box as outlined in section "Device Indentification Details" point 1 can be seen below.
 ![alt text](light-hearted-device.png)
 
 ## Clinical Investigation Requirements
