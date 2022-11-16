@@ -4,7 +4,7 @@ version: 0.1
 
 ---
 
-# Software and Hardware Design Specification - Light-Hearted
+# Software and Hardware Design Specification 
 
 
 |             |                   |
