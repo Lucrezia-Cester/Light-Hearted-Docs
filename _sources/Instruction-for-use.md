@@ -1,5 +1,6 @@
-## Device Purpose
+# Instructions for Use
 
+## Device Purpose
 The device needs to acquire heart valve sounds and has been designed and manufactured to do so.
 
 
