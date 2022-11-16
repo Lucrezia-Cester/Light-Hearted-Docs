@@ -28,7 +28,7 @@ This document applies to Light-Hearted release v.1.0.
 | Clinical lead    | To provide clinical advice on the specificaitons of the device    |
 
 
-# Definition
+# Acronyms
 
 | Item | Definition                                                                   |
 |------|------------------------------------------------------------------------------|
