@@ -36,6 +36,18 @@ There are various scenarious which might occur:
 2. The objective in front of the device is moved with respect to the camera thus it cannot focus light into the camera chip. If this happens while following the instructions in the document "device labels" under the section "Operating Instructions" step 6.5, the software will show that the data has not been acquired successfully and will show that the reflected light acquired by the camera does not match the required specifications as outlined in section 6.5. In this case the manufacturer must be called to fix the device, until then the device cannot be used.
 3. Clinicians should calibrate the device and perdorm QA on the device once a day to ensure the device is working according to specifications. The instructions to permorm QA are laid out in this document in the section "Demage to the device".
 
+If the device is damaged, contact the manufacturer. 
+
 
 
 ## Quality Assurance
+The manufacturer must carry out Quality Assurance testing of the device at the beginning of every day, before the device is used for the rest of the day. The steps for QA include: 
+1. Have a person sit in front of the device, the same position and distance from the device as the patients will be.
+2. Turn on the device according to the instructions described in the document "device labels" under the section "Operating Instructions". 
+3. Acquire data.
+4. From the software, choose the QA page.
+5. Check the speckle pattern obtained from the reflected light. Make sure that the speckles (white dots) are in the field of view of the camera. Strictly speaking, there is a filter in front of the camera, so only the backscattered laser light can enter the camera. Backscattered laser light will be dotted ratehr uniform. For this reason, the manufacturer just needs to check the dots of light hit the camera.
+6. If the speckles aren't in the field of view of the camera, slide off the top part of the device. 
+7. Adjust the angle the camera is pointing and repeat steps 3-5. 
+8. If you get to step 6 again, adjust the objective of the camera and test out steps 3-5 again. This should ensure the device now works correctly. 
+
