@@ -1,0 +1,761 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Clinical Risk Management - SyntheticCT &#8212; Light-Hearted Technical File</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/light-hearted-logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Light-Hearted Technical File</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Light-Hearted Techical File
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Instruction-for-use.html">
+   Instructions for Use
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Device%20Labels.html">
+   Device Labels
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Device-Clinical-Experience.html">
+   Clinical  Experience
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hardware%20and%20software%20design%20and%20specifications.html">
+   Software and Hardware Design Specification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hazard-log.html">
+   risk levels:
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/Clinical Risk Management.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#purpose">
+   Purpose
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scope">
+   Scope
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definitions">
+   Definitions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#roles-and-responsibilities">
+   Roles and Responsibilities
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resource-allocation">
+     Resource allocation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#project-overview-and-clinical-safety">
+   Project overview and clinical safety
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#impact-of-dcb0129-and-dcb0160-on-the-project">
+     Impact of DCB0129 and DCB0160 on the project
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clinical-risk-management-file">
+   Clinical Risk Management File
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hazard-log">
+   Hazard Log
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#references">
+     References
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Clinical Risk Management - SyntheticCT</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#purpose">
+   Purpose
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scope">
+   Scope
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definitions">
+   Definitions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#roles-and-responsibilities">
+   Roles and Responsibilities
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#resource-allocation">
+     Resource allocation
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#project-overview-and-clinical-safety">
+   Project overview and clinical safety
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#impact-of-dcb0129-and-dcb0160-on-the-project">
+     Impact of DCB0129 and DCB0160 on the project
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clinical-risk-management-file">
+   Clinical Risk Management File
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hazard-log">
+   Hazard Log
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#references">
+     References
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="clinical-risk-management-syntheticct">
+<h1>Clinical Risk Management - SyntheticCT<a class="headerlink" href="#clinical-risk-management-syntheticct" title="Permalink to this headline">#</a></h1>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Document Id</p></td>
+<td><p>synct-crmp-v1.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Version</p></td>
+<td><p>1.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Author</p></td>
+<td><p>Anil Mistry</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<section id="purpose">
+<h2>Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">#</a></h2>
+<p>This purpose of this document is to describe the activities involved in the clinical risk management process</p>
+<p>This document is meant to be read and agreed-upon by the project owners, the CSC team, and the Clinical Scientific
+Officer during design and development.</p>
+<p>The document also provides traceability for risk controls throughout the project.</p>
+</section>
+<section id="scope">
+<h2>Scope<a class="headerlink" href="#scope" title="Permalink to this headline">#</a></h2>
+<p>This document applies to SyntheticCT release 1.0.</p>
+</section>
+<section id="definitions">
+<h2>Definitions<a class="headerlink" href="#definitions" title="Permalink to this headline">#</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Term</p></th>
+<th class="head"><p>Definition</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CRMF</p></td>
+<td><p>Clinical Risk Management File</p></td>
+</tr>
+<tr class="row-odd"><td><p>CRMP</p></td>
+<td><p>Clinical Risk Management Plan</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="roles-and-responsibilities">
+<h2>Roles and Responsibilities<a class="headerlink" href="#roles-and-responsibilities" title="Permalink to this headline">#</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Role</p></th>
+<th class="head"><p>Responsibilities</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Development Lead</p></td>
+<td><p>- Completing documentation <br>  - Gathering requirements <br >- Organising meetings with stakeholders</p></td>
+</tr>
+<tr class="row-odd"><td><p>Clinical Lead</p></td>
+<td><p>- Organising meetings with stakeholders <br>  - Providing requirements</p></td>
+</tr>
+<tr class="row-even"><td><p>Clinical Safety Officer</p></td>
+<td><p>- Final approval of clinical risk management activities.</p></td>
+</tr>
+</tbody>
+</table>
+<section id="resource-allocation">
+<h3>Resource allocation<a class="headerlink" href="#resource-allocation" title="Permalink to this headline">#</a></h3>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Role</p></th>
+<th class="head"><p>Name</p></th>
+<th class="head"><p>Evidence of competence</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Development lead</p></td>
+<td><p>Anil Mistry</p></td>
+<td><p>Stage 1 Clinical Risk Management Training</p></td>
+</tr>
+<tr class="row-odd"><td><p>Clinical Lead</p></td>
+<td><p>Christopher Thomas</p></td>
+<td><p>N/A</p></td>
+</tr>
+<tr class="row-even"><td><p>Clinical Safety Officer</p></td>
+<td><p>David Eaton</p></td>
+<td><p>Head of Department - clinical experience</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="project-overview-and-clinical-safety">
+<h2>Project overview and clinical safety<a class="headerlink" href="#project-overview-and-clinical-safety" title="Permalink to this headline">#</a></h2>
+<section id="impact-of-dcb0129-and-dcb0160-on-the-project">
+<h3>Impact of DCB0129 and DCB0160 on the project<a class="headerlink" href="#impact-of-dcb0129-and-dcb0160-on-the-project" title="Permalink to this headline">#</a></h3>
+<p>Since CSC will be both the Manufacturer and user of the software, the project will therefore adhere to all applicable
+requirements of DCB0129 and DCB0160 in this regard.</p>
+</section>
+</section>
+<section id="clinical-risk-management-file">
+<h2>Clinical Risk Management File<a class="headerlink" href="#clinical-risk-management-file" title="Permalink to this headline">#</a></h2>
+<p>The clinical risk matrix, evaluation and management process used is defined below and can also be found in more detail
+within the appendix. The hazard assessment process will follow the standard Clinical Risk Management System approach.
+Hazards may be identified in other ways during the development and use of the programme such as:</p>
+<ul class="simple">
+<li><p>Discovery during design of a solution by supplier or NHS Organisation;</p></li>
+<li><p>Testing of amended functionality;</p></li>
+<li><p>Ad hoc testing of live service functionality;</p></li>
+<li><p>Reporting of an incident or problem within the live service; and</p></li>
+</ul>
+<p>For each identified hazard, the following information will be defined, recorded and summarised in the Hazard Log:</p>
+<ul class="simple">
+<li><p>Hazard number;</p></li>
+<li><p>Hazard description;</p></li>
+<li><p>Potential clinical impact – this will describe the effect of the hazard in the care setting and potential impact on
+the patient;</p></li>
+<li><p>Possible causes – these may be technical, human, error etc. A hazard may have a number of causes; and</p></li>
+<li><p>Existing controls – these are identified existing controls or measures that are currently in place and will remain in
+place post implementation that provide mitigation again the hazard, i.e. will be used as part of the initial Hazard Risk
+Assessment.</p></li>
+</ul>
+<p>Each Hazard will be discussed by the programme Clinical Safety team and any other appropriate people. They will perform
+the following tasks and record the outcome in the Hazard Log:</p>
+<ul class="simple">
+<li><p>Estimation of clinical risks</p></li>
+<li><p>Clinical risk evaluation</p></li>
+<li><p>Clinical risk control option management</p></li>
+</ul>
+<p>For each identified hazard estimation will be made of the clinical risk. This will include the severity of the hazard,
+the likelihood of the hazard and the resulting clinical risk. The estimation process will follow that established by the
+safety processes defined in DCB0129.</p>
+</section>
+<section id="hazard-log">
+<h2>Hazard Log<a class="headerlink" href="#hazard-log" title="Permalink to this headline">#</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Hazard ID</p></th>
+<th class="head"><p>Hazard description</p></th>
+<th class="head"><p>Potential clinical impact</p></th>
+<th class="head"><p>Possible causes</p></th>
+<th class="head"><p>Existing controls</p></th>
+<th class="head"><p>Initial severity</p></th>
+<th class="head"><p>Initial likelihood</p></th>
+<th class="head"><p>Initial risk</p></th>
+<th class="head"><p>Design controls</p></th>
+<th class="head"><p>Final likelihood</p></th>
+<th class="head"><p>residual risk</p></th>
+<th class="head"><p>residual risk comment</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SYNCT-HZ-001</p></td>
+<td><p>Incorrect Hounsfield units assigned to tissues.</p></td>
+<td><p>Incorrect dose distribution calculated, leading to mistreatment (incorrect treatment such as over irradiation of OARs and poor coverage of target) or patient delays. Patient reverts to CT pathway -&gt; Patient delays</p></td>
+<td><p>Trained model unable to process unfamiliar data.  Patient anatomy not representative of training data.  Patient scanned with incorrect orientation (non-HFS).</p></td>
+<td><p>RT Checking and RT Treatment Planning to check HU values Thresholding tools on eclipse Diamond check &gt; forces patient to water, checks dose distribution within tolerance</p></td>
+<td><p>Major</p></td>
+<td><p>Low</p></td>
+<td><p>3</p></td>
+<td><p>Mean HU value <br> Histogram analysis of HU <br>&gt;Acceptable range -1000HU to 2000HU <br> Comparing Volumes between CT and MRIs <br> Geometric scaling check <br> threshold on CT and MR <br>  Mean distance to agreement, DICE, Volume check.</p></td>
+<td><p>Very Low</p></td>
+<td><p>2</p></td>
+<td><p>Checks will ensure significant discrepancies in contour difference will be noted in log file to alert user doing manual SynCT QA checks</p></td>
+</tr>
+<tr class="row-odd"><td><p>SYNCT-HZ-002</p></td>
+<td><p>Wrong series/study sent.</p></td>
+<td><p>Incorrect HU values assigned to tissues, gives incorrect dose distribution <br> mistreatment or patient delays. No SynCT generated for patient. Correct series to be resent -&gt; Slight delay in pathway. Re-imaging of patient -&gt; longer delay in pathway</p></td>
+<td><p>Poor / lack of training	Work instruction for radiographers.</p></td>
+<td><p>Written instruction at end of MR protocol.</p></td>
+<td><p>Minor</p></td>
+<td><p>Low</p></td>
+<td><p>1</p></td>
+<td><p>is_valid_function: Check to confirm Series name, Scanner, modality</p></td>
+<td><p>Very Low</p></td>
+<td><p>1</p></td>
+<td><p>Limits access to SynCT processing through predicate. Log file created for MRI’s failing predicate to aid analysis on non-triggering SynCT inference</p></td>
+</tr>
+<tr class="row-even"><td><p>SYNCT-HZ-003</p></td>
+<td><p>Incorrect Protocol used for MRI imaging.</p></td>
+<td><p>No SynCT generated for patient <br> Re-imaging of patient, delays in patient pathway.</p></td>
+<td><p>Poor / lack of training <br>Protocol not available. Clinician error on request form MRI vetting team book onto wrong MR scanner.</p></td>
+<td><p>Work Instruction for radiographer. <br> Work instruction for clinicians for EPR referral. Availability of protocol on MR console.</p></td>
+<td><p>Minor</p></td>
+<td><p>Very low</p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p>Very Low</p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>SYNCT-HZ-004</p></td>
+<td><p>Acquisition protocol parameters changed or alternative coil used on MR. Causes change in geometric distortion, signal intensity, scanned anatomy, FOV, missing tissues.</p></td>
+<td><p>Incorrect HU values assigned to tissues, gives incorrect dose distribution <br> mistreatment or patient delays. Geometric distortion affects dose distribution <br> mistreatment or patient delays.</p></td>
+<td><p>Optimisation of parameter by MR radiographer.<br>Changes to protocol during update <br> Removal of protocol during update</p></td>
+<td><p>Protocol is locked for all patients.<br>RT staff present on scanner. <br> Written instruction to provide limits on each parameter in protocol.</p></td>
+<td><p>Considerable</p></td>
+<td><p>Medium</p></td>
+<td><p>3</p></td>
+<td><p>is_valid_function: Check to confirm scanning parameters within tolerance (e.g. bandwidth, TE, TR, distortion correction ON). <br>Store backup of MRI scan protocol on GitHub alongside model.<br> Adding noise to training data. <br> Log file to output warnings of out of tolerance MR-specific dicom tags, where appropriate, for validation by MR physicists and</p></td>
+<td><p>Very Low</p></td>
+<td><p>2</p></td>
+<td><p>Added info for Manual QA analysis by MR/Radiotherapy physicist. Automated QA checks before triggering inference.</p></td>
+</tr>
+<tr class="row-even"><td><p>SYNCT-HZ-005</p></td>
+<td><p>Wrong HU as a result of artefact from prosthetic.</p></td>
+<td><p>Causes incorrect HU values, incorrect dose distribution -&gt; mistreatment or patient delays. Causes geometric distortion of image significant enough to affect dose distribution -&gt; mistreatment or patient delays. Patient reverts to CT pathway -&gt; patient delays</p></td>
+<td><p>Trained model causes HU incorrect estimation of tissue within artefact region, differing from water &gt; +/-50HU.</p></td>
+<td><p>Allow single prosthetic hip<br>planning work instruction to avoid hip implant <br> Fiducials are not a concern<br>SPACE-OAR affects MR contrast Electron density is water equivalent - get more info on this.<br>Planning to contour and force HU before Treatment planning.</p></td>
+<td><p>Considerable</p></td>
+<td><p>Low</p></td>
+<td><p>2</p></td>
+<td><p></p></td>
+<td><p>Very Low</p></td>
+<td><p>2</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>SYNCT-HZ-006</p></td>
+<td><p>Unintended patient imaged with protocol. Synthetic CT generated when not required.</p></td>
+<td><p>Planner misinterprets synthetic CT as true CT and treatment planning using MR-only planning pathway when not intended. Correct scan needs to be booked <br> delays in patient treatment</p></td>
+<td><p>Clinician error on request form MRI vetting team error in EPR interpretation.</p></td>
+<td><p>MR-only pathway SOP document defining eligibility, pre-requisites (clinician’s EPR request for MR-only prostate, no nodal involvement, …). Oncologists training on how to</p></td>
+<td><p>Minor</p></td>
+<td><p>Very Low</p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p>Very Low</p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>SYNCT-HZ-007</p></td>
+<td><p>Wrong patient orientation causes miscalculation of HU in Inference.</p></td>
+<td><p>Incorrect HU generated <br> Mistreatment or re-imaging of patient, delays in patient pathway.</p></td>
+<td><p>Poor / lack of training	Work instructions to ensure patients are scanned HFS.</p></td>
+<td><p></p></td>
+<td><p>Significant</p></td>
+<td><p>Very low</p></td>
+<td><p>1</p></td>
+<td><p>Check in predicate for is_valid_function is HeadFirstSupine</p></td>
+<td><p>Very low</p></td>
+<td><p>1</p></td>
+<td><p>Risk of incorrect orientation now limited to radiographer set-up. can be resolved by training/ work instructions</p></td>
+</tr>
+<tr class="row-odd"><td><p>SYNCT-HZ-008</p></td>
+<td><p>Connection between MR and DicomServer goes down.</p></td>
+<td><p>No SynCT generated for patient. Patient delayed while system comes back online.<br>Patient reverts to CT pathway <br> patient delays</p></td>
+<td><p>DicomServer computer turns off/has fault. MRI machine system update by engineers.</p></td>
+<td><p></p></td>
+<td><p>Minor</p></td>
+<td><p>Low</p></td>
+<td><p>1</p></td>
+<td><p>Ability to send images from Eclipse or PACS to DicomServer</p></td>
+<td><p>Very low</p></td>
+<td><p>1</p></td>
+<td><p>Low chance of in-accessibility to SynCT for valid use.</p></td>
+</tr>
+<tr class="row-even"><td><p>SYNCT-HZ-009</p></td>
+<td><p>Docker container is lost/overridden/corrupted.</p></td>
+<td><p>No SynCT generated for patient. Patient delayed while system comes back online.<br>Patient reverts to CT pathway <br> patient delays</p></td>
+<td><p>DicomServer computer turns off/has fault.</p></td>
+<td><p></p></td>
+<td><p>Minor</p></td>
+<td><p>Low</p></td>
+<td><p>1</p></td>
+<td><p>Restore Docker from GitHub.</p></td>
+<td><p>Very low</p></td>
+<td><p>1</p></td>
+<td><p>Very low risk of application being unavailable on GitHub.</p></td>
+</tr>
+<tr class="row-odd"><td><p>SYNCT-HZ-010</p></td>
+<td><p>DicomServer goes down / becomes unavailable.</p></td>
+<td><p>No SynCT generated for patient. Patient delayed while system comes back online.<br>Patient reverts to CT pathway <br> patient delays</p></td>
+<td><p>DicomServer computer turns off/has fault.</p></td>
+<td><p></p></td>
+<td><p>Minor</p></td>
+<td><p>Low</p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+<td><p>Low</p></td>
+<td><p>1</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<section id="references">
+<h3>References<a class="headerlink" href="#references" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Lucrezia Cester<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
