@@ -279,6 +279,11 @@ title="Print to PDF"
    risk acceptability matrix:
   </a>
  </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#risks">
+   risks:
+  </a>
+ </li>
 </ul>
 
     </nav>
@@ -311,6 +316,11 @@ title="Print to PDF"
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#risk-acceptability-matrix">
    risk acceptability matrix:
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#risks">
+   risks:
   </a>
  </li>
 </ul>
@@ -365,19 +375,22 @@ description: Results in patient death</p></li>
 5.[Low, Medium, Medium, High, High]
 </pre></div>
 </div>
-<p>risks:
-1.hazard_id : SYNCT-HZ-001
-hazard_description : Incorrect Hounsfield units assigned to tissues
-potential_clinical_impact : Incorrect dose distribution calculated, leading to mistreatment (incorrect treatment such as over irradiation of OARs and poor coverage of target) or patient delays. Patient reverts to CT pathway -&gt; Patient delays
-possible_causes : NN unable to process unfamiliar data.  Patient anatomy not representative of training data. Patient scanned with incorrect orientation (non-HFS)
-existing_controls : Checking and treatment planning to check HU values Thresholding tools on eclipse Diamond check &gt; forces patient to water, checks dose distribution within tolerance
-initial_severity : Major
-initial_likelihood: Low
-initial_risk : 3
-design_controls: Mean HU value Histogram analysis of HU Acceptable range -1000HU to 2000HU  Comparing Volumes between CT and MRIs  Geometric scaling check &gt; threshold on CT and MR &gt; Mean distance to agreement, DICE, Volume check.
-final_likelihood: Very Low
-final_risk: 2</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  2.hazard_id : SYNCT-HZ-002
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="risks">
+<h1>risks:<a class="headerlink" href="#risks" title="Permalink to this headline">#</a></h1>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  1. hazard_id : SYNCT-HZ-001
+  hazard_description : Incorrect Hounsfield units assigned to tissues
+  potential_clinical_impact : Incorrect dose distribution calculated, leading to mistreatment (incorrect treatment such as over irradiation of OARs and poor coverage of target) or patient delays. Patient reverts to CT pathway -&gt; Patient delays
+  possible_causes : NN unable to process unfamiliar data.  Patient anatomy not representative of training data. Patient scanned with incorrect orientation (non-HFS)
+  existing_controls : Checking and treatment planning to check HU values Thresholding tools on eclipse Diamond check &gt; forces patient to water, checks dose distribution within tolerance
+  initial_severity : Major
+  initial_likelihood: Low
+  initial_risk : 3
+  design_controls: Mean HU value Histogram analysis of HU Acceptable range -1000HU to 2000HU  Comparing Volumes between CT and MRIs  Geometric scaling check &gt; threshold on CT and MR &gt; Mean distance to agreement, DICE, Volume check.
+  final_likelihood: Very Low
+  final_risk: 2
+
+  2. hazard_id : SYNCT-HZ-002
   hazard_description : Wrong series/study sent
   potential_clinical_impact : Incorrect HU values assigned to tissues, gives incorrect dose distribution -&gt; mistreatment or patient delays.  No SynCT generated for patient.  Correct series to be resent -&gt; Slight delay in pathway.  Re-imaging of patient -&gt; longer delay in pathway
   possible_causes : Poor / lack of training
@@ -389,7 +402,7 @@ final_risk: 2</p>
   final_likelihood: Very Low
   final_risk: 1
 
-  3.hazard_id : SYNCT-HZ-003
+  3. hazard_id : SYNCT-HZ-003
   hazard_description : Incorrect Protocol used for MRI imaging
   potential_clinical_impact : No SynCT generated for patient Re-imaging of patient, delays in patient pathway.
   possible_causes : Poor / lack of training Protocol not available. Clinician error on request form MRI vetting team book onto wrong MR scanner.
@@ -401,7 +414,7 @@ final_risk: 2</p>
   final_likelihood: Very Low
   final_risk: 1
 
-  4.hazard_id : SYNCT-HZ-004
+  4. hazard_id : SYNCT-HZ-004
   hazard_description : Acquisition protocol parameters changed or alternative coil used on MR. Causes change in geometric distortion, signal intensity, scanned anatomy, FOV, missing tissue.
   potential_clinical_impact : Incorrect HU values assigned to tissues, gives incorrect dose distribution -&gt; mistreatment or patient delays.  Geometric distortion affects dose distribution -&gt; mistreatment or patient delays.
   possible_causes : Optimisation of parameter by MR radiographer.  Changes to protocol during update removal of protocol during update
@@ -413,7 +426,7 @@ final_risk: 2</p>
   final_likelihood: Very Low
   final_risk: 2
 
-  5.hazard_id : SYNCT-HZ-005
+  5. hazard_id : SYNCT-HZ-005
   hazard_description : Wrong HU as a result of artefact from prosthetic
   potential_clinical_impact : Causes incorrect HU values, incorrect dose distribution -&gt; mistreatment or patient delays.  Causes geometric distortion of image significant enough to affect dose distribution -&gt; mistreatment or patient delays.  Patient reverts to CT pathway -&gt; patient delays
   possible_causes : Trained model causes HU incorrect estimation of tissue within artefact region, differing from water &gt; +-50HU.
@@ -425,7 +438,7 @@ final_risk: 2</p>
   final_likelihood: Very Low
   final_risk: 2
 
-  6.hazard_id : SYNCT-HZ-007
+  6. hazard_id : SYNCT-HZ-007
   hazard_description : Unintended patient imaged with protocol. Synthetic CT generated when not required.
   potential_clinical_impact :  Planner misinterprets synthetic CT as true CT and treatment planning using MR-only planning pathway when not intended.  Correct scan needs to be booked -&gt; delays in patient treatment
   possible_causes : Clinician error on request form MRI vetting team error in EPR interpretation.
@@ -437,7 +450,7 @@ final_risk: 2</p>
   final_likelihood: Very Low
   final_risk: 1
 
-  7.hazard_id : SYNCT-HZ-008
+  7. hazard_id : SYNCT-HZ-008
   hazard_description : Wrong patient orientation causes miscalculation of HU in Inference
   potential_clinical_impact : Incorrect HU generated -&gt; mistreatment or re-imaging of patient, delays in patient pathway.
   possible_causes : Poor / lack of training
@@ -449,7 +462,7 @@ final_risk: 2</p>
   final_likelihood: Very low
   final_risk: 1
 
-  8.hazard_id : SYNCT-HZ-009
+  8. hazard_id : SYNCT-HZ-009
   hazard_description : Connection between MR and Dicomserver goes down
   potential_clinical_impact : No SynCT generated for patient. Patient delayed while system comes back online. Patient reverts to CT pathway -&gt; patient delays
   possible_causes : DicomServer computer turns off/has fault. MRI machine system update by engineers
@@ -461,7 +474,7 @@ final_risk: 2</p>
   final_likelihood: Very low
   final_risk: 1
 
-  9.hazard_id : SYNCT-HZ-010
+  9. hazard_id : SYNCT-HZ-010
   hazard_description : Docker container is lost/overridden/corrupted,
   potential_clinical_impact : No SynCT generated for patient. Patient delayed while system comes back online. Patient reverts to CT pathway -&gt; patient delays
   possible_causes : DicomServer computer turns off/has fault.
@@ -473,7 +486,7 @@ final_risk: 2</p>
   final_likelihood: Very low
   final_risk: 1
 
-  10.hazard_id : SYNCT-HZ-011
+  10. hazard_id : SYNCT-HZ-011
   hazard_description : DicomServer goes down / becomes unavailable
   potential_clinical_impact : No SynCT generated for patient. Patient delayed while system comes back online. Patient reverts to CT pathway -&gt; patient delays
   possible_causes : DicomServer computer turns off/has fault.
