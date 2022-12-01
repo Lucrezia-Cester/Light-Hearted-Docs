@@ -1,36 +1,36 @@
 risk_levels:
-    - label: Low
-      description: Acceptable
-    - label: Medium
-      description: Investigate further risk reduction
-    - label: High
-      description: Unacceptable
+1.label: Low
+  description: Acceptable
+2.label: Medium
+  description: Investigate further risk reduction
+3.label: High
+  description: Unacceptable
 risk_probability_levels:
-    - label: Low
-      description: Unlikely
-    - label: Medium
-      description: Somewhat likely
-    - label: High
-      description: Likely
+1.label: Low
+  description: Unlikely
+2.label: Medium
+  description: Somewhat likely
+3.label: High
+  description: Likely
 risk_severity_levels:
-    - label: Negligible
-      description: Inconvenience or temporary discomfort
-    - label: Minor
-      description: Results in temporary injury or impairment not requiring professional medical intervention
-    - label: Serious
-      description: Results in injury or impairment requiring professional medical intervention
-    - label: Critical
-      description: Results in permanent impairment or life-threatening injury
-    - label: Catastrophic
-      description: Results in patient death
+1.label: Negligible
+  description: Inconvenience or temporary discomfort
+2.label: Minor
+  description: Results in temporary injury or impairment not requiring professional medical intervention
+3.label: Serious
+  description: Results in injury or impairment requiring professional medical intervention
+4.label: Critical
+  description: Results in permanent impairment or life-threatening injury
+5.label: Catastrophic
+  description: Results in patient death
 risk_acceptability_matrix:
-    - [Low, Low, Low, Low, Low]
-    - [Low, Low, Low, Low, Medium]
-    - [Low, Low, Low, Medium, Medium]
-    - [Low, Low, Medium, Medium, High]
-    - [Low, Medium, Medium, High, High]
+    1.[Low, Low, Low, Low, Low]
+    2.[Low, Low, Low, Low, Medium]
+    3.[Low, Low, Low, Medium, Medium]
+    4.[Low, Low, Medium, Medium, High]
+    5.[Low, Medium, Medium, High, High]
 risks:
-    - hazard_id : SYNCT-HZ-001
+      1.hazard_id : SYNCT-HZ-001
       hazard_description : Incorrect Hounsfield units assigned to tissues
       potential_clinical_impact : Incorrect dose distribution calculated, leading to mistreatment (incorrect treatment such as over irradiation of OARs and poor coverage of target) or patient delays. Patient reverts to CT pathway -> Patient delays
       possible_causes : NN unable to process unfamiliar data.  Patient anatomy not representative of training data. Patient scanned with incorrect orientation (non-HFS)
@@ -42,7 +42,7 @@ risks:
       final_likelihood: Very Low
       final_risk: 2
 
-    - hazard_id : SYNCT-HZ-002
+      2.hazard_id : SYNCT-HZ-002
       hazard_description : Wrong series/study sent
       potential_clinical_impact : Incorrect HU values assigned to tissues, gives incorrect dose distribution -> mistreatment or patient delays.  No SynCT generated for patient.  Correct series to be resent -> Slight delay in pathway.  Re-imaging of patient -> longer delay in pathway
       possible_causes : Poor / lack of training
@@ -54,7 +54,7 @@ risks:
       final_likelihood: Very Low
       final_risk: 1
 
-    - hazard_id : SYNCT-HZ-003
+      3.hazard_id : SYNCT-HZ-003
       hazard_description : Incorrect Protocol used for MRI imaging
       potential_clinical_impact : No SynCT generated for patient Re-imaging of patient, delays in patient pathway.
       possible_causes : Poor / lack of training Protocol not available. Clinician error on request form MRI vetting team book onto wrong MR scanner.
@@ -66,7 +66,7 @@ risks:
       final_likelihood: Very Low
       final_risk: 1
 
-    - hazard_id : SYNCT-HZ-004
+      4.hazard_id : SYNCT-HZ-004
       hazard_description : Acquisition protocol parameters changed or alternative coil used on MR. Causes change in geometric distortion, signal intensity, scanned anatomy, FOV, missing tissue.
       potential_clinical_impact : Incorrect HU values assigned to tissues, gives incorrect dose distribution -> mistreatment or patient delays.  Geometric distortion affects dose distribution -> mistreatment or patient delays.
       possible_causes : Optimisation of parameter by MR radiographer.  Changes to protocol during update removal of protocol during update
@@ -78,7 +78,7 @@ risks:
       final_likelihood: Very Low
       final_risk: 2
 
-    - hazard_id : SYNCT-HZ-005
+      5.hazard_id : SYNCT-HZ-005
       hazard_description : Wrong HU as a result of artefact from prosthetic
       potential_clinical_impact : Causes incorrect HU values, incorrect dose distribution -> mistreatment or patient delays.  Causes geometric distortion of image significant enough to affect dose distribution -> mistreatment or patient delays.  Patient reverts to CT pathway -> patient delays
       possible_causes : Trained model causes HU incorrect estimation of tissue within artefact region, differing from water > +-50HU.
@@ -90,7 +90,7 @@ risks:
       final_likelihood: Very Low
       final_risk: 2
 
-    - hazard_id : SYNCT-HZ-007
+      6.hazard_id : SYNCT-HZ-007
       hazard_description : Unintended patient imaged with protocol. Synthetic CT generated when not required.
       potential_clinical_impact :  Planner misinterprets synthetic CT as true CT and treatment planning using MR-only planning pathway when not intended.  Correct scan needs to be booked -> delays in patient treatment
       possible_causes : Clinician error on request form MRI vetting team error in EPR interpretation.
@@ -102,7 +102,7 @@ risks:
       final_likelihood: Very Low
       final_risk: 1
 
-    - hazard_id : SYNCT-HZ-008
+      7.hazard_id : SYNCT-HZ-008
       hazard_description : Wrong patient orientation causes miscalculation of HU in Inference
       potential_clinical_impact : Incorrect HU generated -> mistreatment or re-imaging of patient, delays in patient pathway.
       possible_causes : Poor / lack of training
@@ -114,7 +114,7 @@ risks:
       final_likelihood: Very low
       final_risk: 1
 
-    - hazard_id : SYNCT-HZ-009
+      8.hazard_id : SYNCT-HZ-009
       hazard_description : Connection between MR and Dicomserver goes down
       potential_clinical_impact : No SynCT generated for patient. Patient delayed while system comes back online. Patient reverts to CT pathway -> patient delays
       possible_causes : DicomServer computer turns off/has fault. MRI machine system update by engineers
@@ -126,7 +126,7 @@ risks:
       final_likelihood: Very low
       final_risk: 1
 
-    - hazard_id : SYNCT-HZ-010
+      9.hazard_id : SYNCT-HZ-010
       hazard_description : Docker container is lost/overridden/corrupted,
       potential_clinical_impact : No SynCT generated for patient. Patient delayed while system comes back online. Patient reverts to CT pathway -> patient delays
       possible_causes : DicomServer computer turns off/has fault.
@@ -138,7 +138,7 @@ risks:
       final_likelihood: Very low
       final_risk: 1
 
-    - hazard_id : SYNCT-HZ-011
+      10.hazard_id : SYNCT-HZ-011
       hazard_description : DicomServer goes down / becomes unavailable
       potential_clinical_impact : No SynCT generated for patient. Patient delayed while system comes back online. Patient reverts to CT pathway -> patient delays
       possible_causes : DicomServer computer turns off/has fault.
