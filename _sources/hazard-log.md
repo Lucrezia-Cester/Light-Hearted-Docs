@@ -1,27 +1,27 @@
 risk_levels:
-1.label: Low
+1. label: Low
   description: Acceptable
-2.label: Medium
+2. label: Medium
   description: Investigate further risk reduction
-3.label: High
+3. label: High
   description: Unacceptable
 risk_probability_levels:
-1.label: Low
+1. label: Low
   description: Unlikely
-2.label: Medium
+2. label: Medium
   description: Somewhat likely
-3.label: High
+3. label: High
   description: Likely
 risk_severity_levels:
-1.label: Negligible
+1. label: Negligible
   description: Inconvenience or temporary discomfort
-2.label: Minor
+2. label: Minor
   description: Results in temporary injury or impairment not requiring professional medical intervention
-3.label: Serious
+3. label: Serious
   description: Results in injury or impairment requiring professional medical intervention
-4.label: Critical
+4. label: Critical
   description: Results in permanent impairment or life-threatening injury
-5.label: Catastrophic
+5. label: Catastrophic
   description: Results in patient death
 risk_acceptability_matrix:
     1.[Low, Low, Low, Low, Low]
