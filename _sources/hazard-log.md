@@ -1,4 +1,5 @@
-# risk levels:
+# Hazard-Log
+## risk levels:
 1. label: Low
   description: Acceptable
 2. label: Medium
@@ -6,7 +7,7 @@
 3. label: High
   description: Unacceptable
   
- # risk probability levels:
+ ## risk probability levels:
 1. label: Low
   description: Unlikely
 2. label: Medium
@@ -24,13 +25,13 @@ risk_severity_levels:
   description: Results in permanent impairment or life-threatening injury
 5. label: Catastrophic
   description: Results in patient death
-# risk acceptability matrix:
+## risk acceptability matrix:
     1.[Low, Low, Low, Low, Low]
     2.[Low, Low, Low, Low, Medium]
     3.[Low, Low, Low, Medium, Medium]
     4.[Low, Low, Medium, Medium, High]
     5.[Low, Medium, Medium, High, High]
-# risks:
+## risks:
       1. hazard_id : LH-001
       hazard_description : Laser pointed in patient's eye
       potential_clinical_impact : Patient's eye is damaged.
