@@ -378,15 +378,15 @@ description: Results in patient death</p></li>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="risks">
 <h1>risks:<a class="headerlink" href="#risks" title="Permalink to this headline">#</a></h1>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  1. hazard_id : SYNCT-HZ-001
-  hazard_description : Incorrect Hounsfield units assigned to tissues
-  potential_clinical_impact : Incorrect dose distribution calculated, leading to mistreatment (incorrect treatment such as over irradiation of OARs and poor coverage of target) or patient delays. Patient reverts to CT pathway -&gt; Patient delays
-  possible_causes : NN unable to process unfamiliar data.  Patient anatomy not representative of training data. Patient scanned with incorrect orientation (non-HFS)
-  existing_controls : Checking and treatment planning to check HU values Thresholding tools on eclipse Diamond check &gt; forces patient to water, checks dose distribution within tolerance
-  initial_severity : Major
-  initial_likelihood: Low
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  1. hazard_id : LH-001
+  hazard_description : Laser pointed in patient&#39;s eye
+  potential_clinical_impact : Patient&#39;s eye is damaged.
+  possible_causes : Device is not used according to manual specifications. The device, through the handle is pointed incorrectly to the wrong body part.
+  existing_controls : Patient should wear laser protective goggles. The device handle should be handled with care to point the laser in the correct direction.
+  initial_severity : Medium
+  initial_likelihood: Medium
   initial_risk : 3
-  design_controls: Mean HU value Histogram analysis of HU Acceptable range -1000HU to 2000HU  Comparing Volumes between CT and MRIs  Geometric scaling check &gt; threshold on CT and MR &gt; Mean distance to agreement, DICE, Volume check.
+  design_controls: Laser Goggles. Device Handle. Device tripod which stabilises the device.
   final_likelihood: Very Low
   final_risk: 2
 

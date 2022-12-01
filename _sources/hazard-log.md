@@ -31,15 +31,15 @@ risk_severity_levels:
     4.[Low, Low, Medium, Medium, High]
     5.[Low, Medium, Medium, High, High]
 # risks:
-      1. hazard_id : SYNCT-HZ-001
-      hazard_description : Incorrect Hounsfield units assigned to tissues
-      potential_clinical_impact : Incorrect dose distribution calculated, leading to mistreatment (incorrect treatment such as over irradiation of OARs and poor coverage of target) or patient delays. Patient reverts to CT pathway -> Patient delays
-      possible_causes : NN unable to process unfamiliar data.  Patient anatomy not representative of training data. Patient scanned with incorrect orientation (non-HFS)
-      existing_controls : Checking and treatment planning to check HU values Thresholding tools on eclipse Diamond check > forces patient to water, checks dose distribution within tolerance
-      initial_severity : Major
-      initial_likelihood: Low
+      1. hazard_id : LH-001
+      hazard_description : Laser pointed in patient's eye
+      potential_clinical_impact : Patient's eye is damaged.
+      possible_causes : Device is not used according to manual specifications. The device, through the handle is pointed incorrectly to the wrong body part.
+      existing_controls : Patient should wear laser protective goggles. The device handle should be handled with care to point the laser in the correct direction.
+      initial_severity : Medium
+      initial_likelihood: Medium
       initial_risk : 3
-      design_controls: Mean HU value Histogram analysis of HU Acceptable range -1000HU to 2000HU  Comparing Volumes between CT and MRIs  Geometric scaling check > threshold on CT and MR > Mean distance to agreement, DICE, Volume check.
+      design_controls: Laser Goggles. Device Handle. Device tripod which stabilises the device.
       final_likelihood: Very Low
       final_risk: 2
 
