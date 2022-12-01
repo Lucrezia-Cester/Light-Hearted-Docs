@@ -1,4 +1,4 @@
-# risk_levels:
+# risk levels:
 1. label: Low
   description: Acceptable
 2. label: Medium
@@ -6,7 +6,7 @@
 3. label: High
   description: Unacceptable
   
- # risk_probability_levels:
+ # risk probability levels:
 1. label: Low
   description: Unlikely
 2. label: Medium
@@ -24,7 +24,7 @@ risk_severity_levels:
   description: Results in permanent impairment or life-threatening injury
 5. label: Catastrophic
   description: Results in patient death
-# risk_acceptability_matrix:
+# risk acceptability matrix:
     1.[Low, Low, Low, Low, Low]
     2.[Low, Low, Low, Low, Medium]
     3.[Low, Low, Low, Medium, Medium]
